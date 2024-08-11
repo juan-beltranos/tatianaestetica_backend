@@ -1,0 +1,20 @@
+{
+    "name": "developer/api-barberia",
+    "description": "Api barberia",
+    "autoload": {
+        "psr-4": {
+            "MVC\\" : "./",
+            "Controllers\\" : "./controllers",
+            "Model\\" : "./models"
+        }
+    },
+    "authors": [
+        {
+            "name": "juan-beltranos",
+            "email": "sebastianbeltran341@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.4"
+    }
+}

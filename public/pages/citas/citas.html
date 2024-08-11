@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Tatiana Estética - Citas</title>
+    <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAAAwCAYAAAClvqwiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAECSURBVGhD7dgxagJRFEZhFxIEV+UKsoaswAVoJzaBVOkFN6BioZBgmbSmCDZ26ghXHE85Y97DpJhwDvydXvBrRqYVViYECUFCkBAkBAlBQpAQJAQJQZkQy+i1H6Lz2+svuX+tmAzi8HLnZt9cS0sIEoKEICEoE2IXH/NpzGs2eqr4keW60RtXf6fc54771+ohhnFcvEfx9vNOmz3X0sqEuN2qX4Vw2WO8fvGhhOohnqPIuJOTECQECUFCUMMg0nZccygjIUgIEoKEoIZBpP3FPm05lFHDIHx8MiGYEEwIJgTzxUz+/vZV3e2EICFICBLiHyQECUFCkBAkBAlBQpAQZRFnYId5AYYsVT0AAAAASUVORK5CYII=" rel="icon">
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tempus-dominus/5.39.0/css/tempusdominus-bootstrap-4.min.css"
+    rel="stylesheet" />
+  
+  
+  <script type="module" crossorigin src="/assets/citas.3d79ee82.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/Alert.e0b33391.js">
+  <link rel="modulepreload" crossorigin href="/assets/sesion.328a2aba.js">
+  <link rel="modulepreload" crossorigin href="/assets/sweetalert2.all.5497c4f7.js">
+  <link rel="stylesheet" href="/assets/Alert.2a64a84a.css">
+</head>
+
+<body>
+
+  <!-- Topbar Start -->
+  <div class="container-fluid bg-light d-none d-lg-block">
+    <div class="row py-2 px-lg-5">
+      <div class="col-lg-6 text-left mb-2 mb-lg-0">
+        <div class="d-inline-flex align-items-center">
+          <small><i class="fa fa-phone-alt mr-2"></i>317 2459918</small>
+          <small class="px-3">|</small>
+          <small><i class="fa fa-envelope mr-2"></i>beltrantatiana510@gmail.com</small>
+        </div>
+      </div>
+      <div class="col-lg-6 text-right">
+        <div class="d-inline-flex align-items-center">
+          <!-- <a class="text-primary px-2" href="">
+                              <i class="fab fa-facebook-f"></i>
+                            </a> -->
+          <a class="text-primary px-2" href="">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Topbar End -->
+
+
+  <!-- Navbar Start -->
+  <div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+      <a href="/" class="navbar-brand ml-lg-3">
+        <h1 class="m-0 text-primary"><span class="text-dark">Tatiana</span>Estética</h1>
+      </a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end px-lg-3" id="navbarCollapse">
+        <div class="navbar-nav py-0">
+          <a href="/" class="nav-item nav-link">Inicio</a>
+          <a href="/pages/productos/productos.html" class="nav-item nav-link">Productos</a>
+
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- Navbar End -->
+
+  <div class="container-app">
+    <div class="imagen"></div>
+    <div class="app">
+      <h1>Reserva tu cita</h1>
+      <h4 class="txt-center mb-5">Elige tus servicios e ingresa tus datos</h4>
+
+      <div class="barra">
+        <p>Hola: <span id="nombreCliente"></span> </p>
+        <button id="cerrar-sesion" class="boton">Cerrar Sesión</button>
+      </div>
+
+      <nav class="tabs">
+        <button type="button" data-paso="1">Servicios</button>
+        <button type="button" data-paso="2">Información Cita</button>
+        <button type="button" data-paso="3">Resumen</button>
+        <button type="button" data-paso="4">Mis citas</button>
+      </nav>
+
+      <div class="seccion" id="paso-1">
+        <h2 class="txt-center">Servicios</h2>
+        <p class="txt-center">Elige tus servicios a continuación</p>
+        <div class="listado-servicios" id="servicios"></div>
+      </div>
+
+      <div class="seccion" id="paso-2">
+        <h2 class="txt-center">Tus datos y cita</h2>
+        <p class="txt-center">Coloca tus datos y fecha de tu cita</p>
+        <form class="formulario">
+          <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre">
+          </div>
+          <div class="campo" id="campoApellido">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido">
+          </div>
+          <div class="campo" id="campoCorreo">
+            <label for="email">Correo</label>
+            <input type="email" id="email">
+          </div>
+          <div class="campo" id="campoTelefono">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono">
+          </div>
+          <div class="campo">
+            <label for="fecha">Fecha</label>
+            <input class="form-control bg-transparent p-4 datetimepicker-input fecha-black" type="date" id="fecha" min="">
+          </div>
+          <div class="campo">
+            <label for="hora">Hora</label>
+            <input type="time" id="hora">
+          </div>
+        </form>
+      </div>
+
+      <div class="seccion contenido-resumen" id="paso-3">
+        <h2 class="txt-center">Resumen</h2>
+        <p class="txt-center">Verifica que la información sea correcta</p>
+      </div>
+
+      <div class="seccion" id="paso-4">
+        <h2 class="txt-center">Mis citas</h2>
+        <p class="txt-center">Aquí puedes ver todas tus citas agendadas en Tatiana Estética</p>
+        <div class="listado-citas"></div>
+      </div>
+
+      <div class="paginacion">
+        <button id="anterior" class="boton">&laquo; Anterior</button>
+        <button id="siguiente" class="boton">Siguiente &raquo; </button>
+      </div>
+
+    </div>
+  </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <script type="text/javascript">
+      emailjs.init('lEfIMApiQio5FvCKJ')
+    </script>
+  
+</body>
+
+</html>
