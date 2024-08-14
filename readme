@@ -10,13 +10,13 @@ npm run dev
 
 SCRIPT Publicar en DOM CLOUD
 
-source: https://github.com/juan-beltranos/Chanel_Glow
+source: https://github.com/juan-beltranos/tatianaestetica_backend
 features:
   - 'php 8.1'
   - mysql
   - ssl
   - 'ssl always'
-root: public_html/backend/public
+root: public_html/public
 nginx:
   fastcgi: 'on'
   locations:
